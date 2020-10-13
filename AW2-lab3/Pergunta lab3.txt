@@ -1,0 +1,4 @@
+Por que acessar diretamente o catalogoProdutosView gera um erro?
+Porque se acessar diretamente ele não ira passar pelo Servlet catalogoProduto, que é onde os dados são reunidos e colocados
+na memória para o Servlet seguinte os usar. Ao acessar diretamente, ele não irá ter nada pra usar pois nada foi colcado na
+memória para ser usado. Portanto o valor que ele pega é nulo, logo, nada a mostrar
