@@ -117,7 +117,9 @@
                     String preco = formatadorMoeda.format(p.getPreco());
             %>
             <TR>
-                <TD width='%10' class='gridCampo'><%=p.getNome()%></TD>
+                <TD width='%10' class='gridCampo'>
+                	<%request.getParameter("nome");%>
+                </TD>
                 <TD width='%20' class='gridCampo'><%=p.getMarca()%></TD>
                 <TD width='%5' class='gridCampo'><%=item.getQuantidade()%></TD>
                 <TD width='%35' class='gridCampo'><%=preco%> (preco unid.)</TD>
