@@ -1,0 +1,17 @@
+CatalogoProdutosView
+3-Quais objetos implícitos estão sendo usandos?
+	-request
+
+4-Quais diretivas?
+	-page
+
+CatalogoComprasView
+5-Quais objetos implícitos estão sendo usandos?
+	-session
+	-request
+
+6-Quais diretivas?
+	-3x page
+
+7-Como é obtido o carrinho de compras?
+	-Pelo objeto implícito SESSION, buscando pela chave "carrinhoCompras"

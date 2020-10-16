@@ -1,5 +1,4 @@
-package br.com.estudo.aw.ecommerce;
-
+package com.labs.aw.aw.ecommerce;
 
 import java.io.*;
 import java.util.List;
@@ -7,9 +6,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
-
-import br.com.estudo.model.Produto;
+import com.lab.model.Produto;
 
 @WebServlet("/catalogoProdutosView")
 public class CatalogoProdutosView extends HttpServlet {
@@ -42,9 +39,10 @@ public class CatalogoProdutosView extends HttpServlet {
         // -------------------------------------------------------------------
         // Insira a partir daqui o código pedido no laboratorio:
         // -------------------------------------------------------------------
-                
-        List<Produto> produtos = (List<Produto>) request.getAttribute("produtos");
-
+        List<Produto> produtos = null;
+        produtos = (List<Produto>) request.getAttribute("catalogo");
+      
+        
         //montagem da tabela com os produtos
         for (Produto prod : produtos) {
             out.println("<TR width = '%100'>");
