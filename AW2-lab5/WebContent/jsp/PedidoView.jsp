@@ -80,15 +80,15 @@
                     <table>
                         <tr>
                             <td width="25%" class="tituloform">Cartão de crédito</td>
-                            <td width="75%" class="gridCampo"> tipo </td>
+                            <td width="75%" class="gridCampo"> <%=request.getParameter("tipo")%> </td>
                         </tr>
                         <tr>
                             <td class="tituloform">Número do cartão</td>
-                            <td class="gridCampo"> numeroCartao </td>
+                            <td class="gridCampo"> <%=request.getParameter("numeroCartao")%> </td>
                         </tr>
                         <tr>
                             <td class="tituloform">Data Validade</td>
-                            <td class="gridCampo"> dataValidade </td>
+                            <td class="gridCampo"> <%=request.getParameter("dataValidade")%> </td>
                         </tr>
                     </table>
                 </td>
@@ -117,9 +117,7 @@
                     String preco = formatadorMoeda.format(p.getPreco());
             %>
             <TR>
-                <TD width='%10' class='gridCampo'>
-                	<%request.getParameter("nome");%>
-                </TD>
+                <TD width='%10' class='gridCampo'><%=p.getNome()%></TD>
                 <TD width='%20' class='gridCampo'><%=p.getMarca()%></TD>
                 <TD width='%5' class='gridCampo'><%=item.getQuantidade()%></TD>
                 <TD width='%35' class='gridCampo'><%=preco%> (preco unid.)</TD>
